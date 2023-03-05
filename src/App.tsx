@@ -1,4 +1,3 @@
-import "./App.css";
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
 import { AppProvider } from "./pages/provider";
