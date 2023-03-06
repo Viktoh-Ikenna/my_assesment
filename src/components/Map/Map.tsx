@@ -8,8 +8,8 @@ import { useAppContext } from "../../pages/provider";
 import { useGetWaetherByLngLat } from "../../pages/hooks/hooks";
 import { Modal } from "@mui/material";
 import { Box } from "@mui/system";
-import { WiHail } from "react-icons/wi";
 import _ from "lodash";
+
 mapboxgl.accessToken =
      process.env.REACT_APP_MAPBOX_KEY ??
      "pk.eyJ1IjoidmlrdG9oIiwiYSI6ImNrcmpyamM1ZjA1ZG8ydnBjbWRpOWtjN2kifQ.auBvgsbud2l08nrj8lXZfg";
@@ -90,7 +90,7 @@ export const Map = () => {
      const handleClose = () => {
           setOpen(false);
      };
-     
+
      return (
           <div>
                <Modal open={open} onClose={handleClose}>
