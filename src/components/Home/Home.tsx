@@ -1,4 +1,6 @@
 import { Map } from "../Map/Map";
+import { SearchInput } from "../SearchInput/SearchInput";
+import { Sidebar } from "../Sidebar/Sidebar";
 import { useHomeStyles } from "./styles";
 
 export const Home = () => {
@@ -6,7 +8,9 @@ export const Home = () => {
 
      return (
           <div className={classes.root}>
+               <SearchInput />
                <Map />
+               <Sidebar />
           </div>
      );
 };
