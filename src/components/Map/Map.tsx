@@ -1,3 +1,4 @@
+/* eslint-disable import/no-webpack-loader-syntax */
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -24,6 +25,11 @@ const boxStyle = {
      boxShadow: 24,
      p: 2,
 };
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+(mapboxgl as any).workerClass =
+     require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+
 export const Map = () => {
      const classes = useMapStyles();
      const mapContainer = useRef<HTMLDivElement>(null);
