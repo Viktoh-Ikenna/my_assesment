@@ -15,6 +15,11 @@ export const useSearchInputStyles = makeStyles((theme: Theme) => ({
           margin: theme.spacing(4),
           width: "40%",
           boxShadow: "1px 2px 4px 1px #cfd4d8",
+
+          [theme.breakpoints.down("sm")]: {
+               width: "100%",
+               padding: theme.spacing(1),
+          },
      },
 
      input: {
@@ -30,6 +35,9 @@ export const useSearchInputStyles = makeStyles((theme: Theme) => ({
                fontSize: 30,
                fontweight: 400,
                color: "#819496",
+          },
+          [theme.breakpoints.down("sm")]: {
+               fontSize: 16,
           },
      },
      optionsContainer: {
